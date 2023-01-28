@@ -20,6 +20,10 @@ def update_todos(todolist):
     todolist.append({"todo description": input("Input your new todo"), "due data": input('When is it due -> mm/dd/aaaa ')})
     print(todolist)
     return todolist
+def consult_todos(todolist):
+    description = int(input("Input the code of your to do list -> "))
+    query = todolist[description]
+    return query
 change = input("Would you like to change something in your list y/n -> ")
 if change == "y":
     option = input(''' Select your option (in numbers)
@@ -38,6 +42,10 @@ if change == "y":
         update_todolist = update_todos(todolist)
         #updating = update_todos(update_todolist)
         print(update_todolist)
+    elif option == "4":
+        consult_todolist = consult_todos(todolist)
+        print(consult_todolist)    
+
     else:
         print("you did not input a correct option")
         
